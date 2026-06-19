@@ -5,11 +5,11 @@ Basic Resume Example using React. This is used as a demonstration in a course ab
 ## Where to place the Cloud Function URL?
 
 On your local folder, create a file called .env, and inside there create a variable called followed by the URL of your cloud function, like this:
-
+```
 VITE_NAME_FUNCTION_URL=https://REGION-PROJECT_ID.cloudfunctions.net/getName
-
+```
 Remember that your Cloud Functions needs to return a JSON like the following example:
-
+```
 {
     name: "Alex Rivera",
     title: "Senior Software Developer",
@@ -22,6 +22,6 @@ Remember that your Cloud Functions needs to return a JSON like the following exa
     status: "success",
     timestamp: new Date().toISOString()
 }
-
+```
 
 
