@@ -1,16 +1,27 @@
-# React + Vite
+# Basic Resume Example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basic Resume Example using React. This is used as a demonstration in a course about Cloud Run Functions with GCP and not for real-world use. You can use this to practice by your own!
 
-Currently, two official plugins are available:
+## Where to place the Cloud Function URL?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+On your local folder, create a file called .env, and inside there create a variable called followed by the URL of your cloud function, like this:
 
-## React Compiler
+VITE_NAME_FUNCTION_URL=https://REGION-PROJECT_ID.cloudfunctions.net/getName
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Remember that your Cloud Functions needs to return a JSON like the following example:
 
-## Expanding the ESLint configuration
+{
+    name: "Alex Rivera",
+    title: "Senior Software Developer",
+    email: "arivera.dev@email.com",
+    phone: "+1 5550000000",
+    location: "Austin, TX",
+    profilepic: "https://i.pravatar.cc/400?img=12",
+    linkedin: "linkedin.com/in/alexrivera-dev",
+    github: "github.com/alexrivera-dev",
+    status: "success",
+    timestamp: new Date().toISOString()
+}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
